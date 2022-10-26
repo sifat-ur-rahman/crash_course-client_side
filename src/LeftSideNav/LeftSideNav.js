@@ -12,8 +12,18 @@ const LeftSideNav = () => {
     },[])
 
     return (
-        <div>
-            <h4> All Courses: {categories.length} </h4>
+        <div className='bg-secondary m-2 p-2 rounded bg-opacity-50'>
+            <h4 className='bg-light rounded'>
+                 All Courses: {categories.length} 
+            </h4>
+            <div className='w-75  m-4  '>
+                {
+                    categories.map(c => <p className='m-2 bg-light rounded' 
+                        key={c.id}>
+                        {c.name}
+                    </p>)
+                }
+            </div>
         </div>
     );
 };
