@@ -18,8 +18,9 @@ const CoursesCard = ({courses}) => {
                  <Card.Text>
                      <p>Course Duration: {time} hours</p>
                  </Card.Text>
-                 <Button variant="btn btn-outline-primary" 
-                 ><Link to={`/details/${id}`}>Details</Link>
+                 <Button variant="btn btn-outline-primary"
+                
+                 ><Link  style={{textDecoration: 'none'}}  to={`/details/${id}`}>Details</Link>
                     </Button>
                 </Card.Body>
                  </Card>
