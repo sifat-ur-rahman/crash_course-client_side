@@ -6,7 +6,7 @@ const Details = () => {
     console.log(CourseDetails);
     return (
         <div>
-            <h3 className='mt-5'>Courses Details {CourseDetails.name}</h3>
+            <h3 className='mt-5'>Courses Details: {CourseDetails.name}</h3>
 
             <div className="card mt-5" >
   <div className="row g-0">

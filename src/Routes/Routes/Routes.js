@@ -3,6 +3,7 @@ import Main from "../../Layout/Main";
 import Home from "../../Home/Home";
 import Details from "../../Details/Details";
 import Blog from "../../Blog/Blog";
+import NoPage from "../../NoPage/NoPage";
 
 
 
@@ -28,5 +29,9 @@ export const routes = createBrowserRouter([
             }
             
         ]
+    },
+    {
+        path:'*',
+        element: <NoPage></NoPage>
     }
 ])
