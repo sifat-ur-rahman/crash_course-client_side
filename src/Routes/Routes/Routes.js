@@ -11,7 +11,8 @@ export const routes = createBrowserRouter([
         children:[
             {
                 path:'/',
-                element: <Home></Home>
+                element: <Home></Home>,
+                loader:()=>fetch('https://server-three-phi.vercel.app/courses')
                 
             },
             
