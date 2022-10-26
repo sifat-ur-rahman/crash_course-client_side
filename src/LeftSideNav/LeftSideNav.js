@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 
 const LeftSideNav = () => {
@@ -20,7 +21,8 @@ const LeftSideNav = () => {
                 {
                     categories.map(c => <p className='m-2 bg-light rounded' 
                         key={c.id}>
-                        {c.name}
+                             <Link to={`/details/${c.id}`}>{c.name}</Link>
+                        
                     </p>)
                 }
             </div>

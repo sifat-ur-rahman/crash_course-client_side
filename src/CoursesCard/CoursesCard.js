@@ -2,10 +2,11 @@ import React from 'react';
 import './CoursesCard.css'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { Link } from 'react-router-dom';
 
 const CoursesCard = ({courses}) => {
-    const {img,name,time}=courses
-    console.log(courses);
+    const {img,name,time,id}=courses
+    // console.log(courses);
     return (
        
            
@@ -17,7 +18,9 @@ const CoursesCard = ({courses}) => {
                  <Card.Text>
                      <p>Course Duration: {time} hours</p>
                  </Card.Text>
-                 <Button variant="btn btn-outline-primary">Details</Button>
+                 <Button variant="btn btn-outline-primary" 
+                 ><Link to={`/details/${id}`}>Details</Link>
+                    </Button>
                 </Card.Body>
                  </Card>
                
