@@ -2,7 +2,8 @@ import React, { useContext, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { Link } from 'react-router-dom';
-import { AuthContext } from '../../../Context/AuthProvider/AuthProvider';
+import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
+
 
 const Register = () => {
     const [error, setError]= useState('')
@@ -17,7 +18,7 @@ const Register = () => {
         const photoURL = form.photoURL.value;
         const email = form.email.value;
         const password = form.password.value;
-        // console.log(name,photoURL,email,password );
+        console.log(name,photoURL,email,password );
 
         createUser(email, password)
         .then(result => {

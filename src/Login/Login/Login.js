@@ -1,19 +1,24 @@
+import { GoogleAuthProvider } from 'firebase/auth';
 import React, { useContext, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import { FaGithub, FaGoogle } from 'react-icons/fa';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { AuthContext } from '../../../Context/AuthProvider/AuthProvider';
+import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
+
 
 
 
 const Login = () => {
     const [error, setError]= useState('')
 
-    const {signIn} = useContext(AuthContext)
+    const {signIn, providerLogin} = useContext(AuthContext)
 
     const navigate = useNavigate()
 
     const  location = useLocation()
+
+    const googleProvider = new GoogleAuthProvider()
 
     const from = location.state?.from?.pathname || '/'
 
@@ -37,6 +42,17 @@ const Login = () => {
             setError(error.message)
         })
     }
+    
+    
+
+const handleGoogleSignIn = () =>{
+    providerLogin(googleProvider)
+    .then(result =>{
+        const user = result.user;
+        console.log(user);
+    })
+    .catch(error => console.error(error))
+}
 
     return (
         <Form onSubmit={handleSubmit}>
@@ -54,6 +70,8 @@ const Login = () => {
         <Button variant="primary" type="submit">
           Login
         </Button> <br></br>
+        <Button onClick={handleGoogleSignIn} className='mb-2 mt-2' variant="outline-primary"> <FaGoogle></FaGoogle>  Login with Google</Button><br />
+      <Button variant="outline-dark"> <FaGithub></FaGithub>  Login with GitHub</Button><br></br>
         <Form.Text className="text-warning">
             {error}
           </Form.Text>
