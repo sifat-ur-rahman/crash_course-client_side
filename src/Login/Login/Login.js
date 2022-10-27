@@ -12,7 +12,7 @@ import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 const Login = () => {
     const [error, setError]= useState('')
 
-    const {signIn, providerLogin} = useContext(AuthContext)
+    const {signIn, providerLogin,providerLoginGithub} = useContext(AuthContext)
 
     const navigate = useNavigate()
 
@@ -57,7 +57,7 @@ const handleGoogleSignIn = () =>{
 }
 
 const handleGithubSignIn = () =>{
-    providerLogin(githubProvider)
+    providerLoginGithub(githubProvider)
     .then(result =>{
         const user = result.user;
         console.log(user);
