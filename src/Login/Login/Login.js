@@ -1,4 +1,4 @@
-import { GoogleAuthProvider } from 'firebase/auth';
+import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 import React, { useContext, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
@@ -19,6 +19,8 @@ const Login = () => {
     const  location = useLocation()
 
     const googleProvider = new GoogleAuthProvider()
+
+    const githubProvider = new GithubAuthProvider()
 
     const from = location.state?.from?.pathname || '/'
 
@@ -54,6 +56,16 @@ const handleGoogleSignIn = () =>{
     .catch(error => console.error(error))
 }
 
+const handleGithubSignIn = () =>{
+    providerLogin(githubProvider)
+    .then(result =>{
+        const user = result.user;
+        console.log(user);
+    })
+    .catch(error => console.error(error))
+}
+
+
     return (
         <Form onSubmit={handleSubmit}>
         <Form.Group className="mb-3 mt-3" controlId="formBasicEmail">
@@ -71,7 +83,7 @@ const handleGoogleSignIn = () =>{
           Login
         </Button> <br></br>
         <Button onClick={handleGoogleSignIn} className='mb-2 mt-2' variant="outline-primary"> <FaGoogle></FaGoogle>  Login with Google</Button><br />
-      <Button variant="outline-dark"> <FaGithub></FaGithub>  Login with GitHub</Button><br></br>
+      <Button onClick={handleGithubSignIn} variant="outline-dark"> <FaGithub></FaGithub>  Login with GitHub</Button><br></br>
         <Form.Text className="text-warning">
             {error}
           </Form.Text>
