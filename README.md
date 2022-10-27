@@ -1,4 +1,4 @@
-live link: https://shiny-zabaione-87a63d.netlify.app/
+live link: https://crash-course-eae91.web.app/
 
 
 1. This is the Courses website.
