@@ -7,6 +7,7 @@ import NoPage from "../../NoPage/NoPage";
 import Login from "../../Login/Login/Login";
 import Register from "../../Login/Register/Register";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import Courses from "../../Courses/Courses";
 
 
 
@@ -17,7 +18,11 @@ export const routes = createBrowserRouter([
         children:[
             {
                 path:'/',
-                element: <Home></Home>,
+                element:<Home></Home>
+            },
+            {
+                path:'/courses',
+                element: <Courses></Courses>,
                 loader:()=>fetch('https://server-three-phi.vercel.app/courses')
                 
             },

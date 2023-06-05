@@ -1,21 +1,17 @@
 import React, { useContext } from 'react';
-import { useState } from 'react';
 import { Image } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { FaRegMoon, FaSun, FaUser } from "react-icons/fa"
+import {  FaUser } from "react-icons/fa"
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
+import './Header.css'
 
 
 const Header= () => {
   
-  const [state, setState] = useState(false);
-
-  const toggle = () =>{
-    setState(!state)
-  }
+  
 
   
     const {user ,logOut}=useContext(AuthContext);
@@ -28,21 +24,19 @@ const Header= () => {
 
     return (
         <div>
-            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-      <Container>
-        <Navbar.Brand href="#home">
-          <img style={{width:35}} src="favicon.jpg" alt="" /> Crash Course</Navbar.Brand>
+            <Navbar collapseOnSelect expand="lg" bg="black" variant="black">
+      <Container className='nav-link fs-4 fw-bold'>
+        <Link className='sideName' to='/'>
+          <img style={{width:145}} src="https://i.ibb.co/xfBqsKN/Screenshot-41.png" alt="" /> </Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="/">Courses</Nav.Link>
-            <button className='bg-light' onClick={toggle}>
-              {state ? <FaRegMoon/>: <FaSun/>}
-            </button>
+            <Link to="/courses">Courses</Link>
+            
            
           </Nav>
           <Nav>
-            <Nav.Link href="/blog">Blog</Nav.Link>
+            <Link to="/blog">Blog</Link>
             <Nav.Link eventKey={2} href="#memes">
             {
                 user?.uid ? 

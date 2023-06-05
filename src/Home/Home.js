@@ -1,20 +1,15 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
-import CoursesCard from '../CoursesCard/CoursesCard';
+import Carousels from './Components/Carousels';
+
 
 const Home = () => {
 
-    const allCourses = useLoaderData()
+   
 
     return (
-        <div className='cards'>
+        <div >
             
-            {
-                allCourses.map(courses=> <CoursesCard
-                key={courses.id}
-                courses={courses}
-                ></CoursesCard>)
-            }
+            <Carousels></Carousels>
         </div>
     );
 };

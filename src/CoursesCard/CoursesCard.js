@@ -18,7 +18,7 @@ const CoursesCard = ({courses}) => {
                  <Card.Text>
                      <p>Course Duration: {time} hours</p>
                  </Card.Text>
-                 <Button variant="btn btn-outline-primary"
+                 <Button variant="btn btn-outline-primary text-white"
                 
                  ><Link  style={{textDecoration: 'none'}}  to={`/details/${id}`}>Details</Link>
                     </Button>
