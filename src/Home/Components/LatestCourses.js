@@ -1,5 +1,7 @@
 import React from 'react';
 import CoursesCard from '../../CoursesCard/CoursesCard';
+import { Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const LatestCourses = () => {
 const allCourses = [
@@ -41,6 +43,10 @@ const allCourses = [
                 courses={courses}
                 ></CoursesCard>)
             }
+            <Link to={'/courses'}><Button className='mx-auto' variant="outline-primary" size="lg">
+        All Courses 
+      </Button></Link>
+            
         </div>
         </div>
     );

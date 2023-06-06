@@ -3,6 +3,7 @@ import Carousels from './Components/Carousels';
 import Flexibility from './Components/Flexibility';
 import LatestCourses from './Components/LatestCourses';
 import DiverseRange from './Components/DiverseRange';
+import Teacher from './Components/Teacher/Teacher';
 
 
 const Home = () => {
@@ -16,6 +17,7 @@ const Home = () => {
             <Flexibility></Flexibility>
             <LatestCourses></LatestCourses>
             <DiverseRange></DiverseRange>
+            <Teacher></Teacher>
         </div>
     );
 };
