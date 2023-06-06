@@ -2,7 +2,7 @@ import React from 'react';
 
 const Blog = () => {
     return (
-        <div className='mt-3'>
+        <div style={{marginTop: 90}} className=''>
             <div className='bg-opacity-25 bg-danger rounded'>
                 <h2>what is cors?</h2>
                 <p>Cross-origin resource sharing (CORS) is a mechanism that allows restricted resources on a web page to be requested from another domain outside the domain from which the first resource was served.</p>

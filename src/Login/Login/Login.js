@@ -67,7 +67,7 @@ const handleGithubSignIn = () =>{
 
 
     return (
-        <Form onSubmit={handleSubmit}>
+        <Form style={{marginTop: 90}} onSubmit={handleSubmit}>
         <Form.Group className="mb-3 mt-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
           <Form.Control name='email' type="email" placeholder="Enter email" required />

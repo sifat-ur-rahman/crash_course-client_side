@@ -24,10 +24,10 @@ const Header= () => {
 
     return (
         <div>
-            <Navbar collapseOnSelect expand="lg" bg="black" variant="black">
+            <Navbar fixed="top" className="fixed-top" collapseOnSelect expand="lg" bg="black" variant="black">
       <Container className='nav-link fs-4 fw-bold'>
         <Link className='sideName' to='/'>
-          <img style={{width:145}} src="https://i.ibb.co/xfBqsKN/Screenshot-41.png" alt="" /> </Link>
+          <img style={{width:135}} src="https://i.ibb.co/xfBqsKN/Screenshot-41.png" alt="" /> </Link>
         <Navbar.Toggle className='bg-secondary' aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">

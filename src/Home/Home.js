@@ -6,6 +6,8 @@ import DiverseRange from './Components/DiverseRange';
 import Teacher from './Components/Teacher/Teacher';
 import Collaboration from './Components/Collaboration';
 import Student from './Components/Student/Student';
+import CostEffectiveness from './CostEffectiveness';
+import FAQ from './Components/FAQ';
 
 
 const Home = () => {
@@ -13,7 +15,7 @@ const Home = () => {
    
 
     return (
-        <div >
+        <div style={{marginTop: 90, marginBottom:60}} >
             
             <Carousels></Carousels>
             <Flexibility></Flexibility>
@@ -22,6 +24,8 @@ const Home = () => {
             <Teacher></Teacher>
             <Collaboration></Collaboration>
             <Student></Student>
+            <CostEffectiveness></CostEffectiveness>
+            <FAQ></FAQ>
         </div>
     );
 };

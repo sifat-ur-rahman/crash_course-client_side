@@ -29,7 +29,7 @@ const Student = () => {
     ]
     return (
         <div>
-            <h2>Our Instructors </h2>
+            <h2>Our Success Story </h2>
             <div className='cards row'>
             {
                 allStudent?.map(student=> <StudentCard
