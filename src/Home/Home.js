@@ -4,6 +4,7 @@ import Flexibility from './Components/Flexibility';
 import LatestCourses from './Components/LatestCourses';
 import DiverseRange from './Components/DiverseRange';
 import Teacher from './Components/Teacher/Teacher';
+import Collaboration from './Components/Collaboration';
 
 
 const Home = () => {
@@ -18,6 +19,7 @@ const Home = () => {
             <LatestCourses></LatestCourses>
             <DiverseRange></DiverseRange>
             <Teacher></Teacher>
+            <Collaboration></Collaboration>
         </div>
     );
 };
