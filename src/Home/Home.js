@@ -5,6 +5,7 @@ import LatestCourses from './Components/LatestCourses';
 import DiverseRange from './Components/DiverseRange';
 import Teacher from './Components/Teacher/Teacher';
 import Collaboration from './Components/Collaboration';
+import Student from './Components/Student/Student';
 
 
 const Home = () => {
@@ -20,6 +21,7 @@ const Home = () => {
             <DiverseRange></DiverseRange>
             <Teacher></Teacher>
             <Collaboration></Collaboration>
+            <Student></Student>
         </div>
     );
 };
