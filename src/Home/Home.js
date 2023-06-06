@@ -1,5 +1,6 @@
 import React from 'react';
 import Carousels from './Components/Carousels';
+import Flexibility from './Components/Flexibility';
 
 
 const Home = () => {
@@ -10,6 +11,7 @@ const Home = () => {
         <div >
             
             <Carousels></Carousels>
+            <Flexibility></Flexibility>
         </div>
     );
 };
