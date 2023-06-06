@@ -11,7 +11,7 @@ const CoursesCard = ({courses}) => {
        
            
                 
-                 <Card style={{ width: '18rem' }} >
+                 <Card className='col-sm' >
                  <Card.Img style={{height:'250px'}} variant="top" src={img} />
                 <Card.Body>
                      <Card.Title>{name}</Card.Title>

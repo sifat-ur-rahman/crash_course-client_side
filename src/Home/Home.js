@@ -1,6 +1,7 @@
 import React from 'react';
 import Carousels from './Components/Carousels';
 import Flexibility from './Components/Flexibility';
+import LatestCourses from './Components/LatestCourses';
 
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
             
             <Carousels></Carousels>
             <Flexibility></Flexibility>
+            <LatestCourses></LatestCourses>
         </div>
     );
 };

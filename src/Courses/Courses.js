@@ -5,7 +5,7 @@ import CoursesCard from '../CoursesCard/CoursesCard';
 const Courses = () => {
     const allCourses = useLoaderData()
     return (
-        <div className='cards'>
+        <div className='cards '>
             
             {
                 allCourses.map(courses=> <CoursesCard

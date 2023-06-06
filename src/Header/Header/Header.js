@@ -28,7 +28,7 @@ const Header= () => {
       <Container className='nav-link fs-4 fw-bold'>
         <Link className='sideName' to='/'>
           <img style={{width:145}} src="https://i.ibb.co/xfBqsKN/Screenshot-41.png" alt="" /> </Link>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Toggle className='bg-secondary' aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
             <Link to="/courses">Courses</Link>

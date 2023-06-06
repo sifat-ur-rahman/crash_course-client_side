@@ -2,7 +2,7 @@ import React from 'react';
 
 const Flexibility = () => {
     return (
-        <section className=''>
+        <section className='mb-4'>
             <div className='row row-lg-cols-2'>
             <div className='col-sm align-self-center text-start'>
             <h2>
