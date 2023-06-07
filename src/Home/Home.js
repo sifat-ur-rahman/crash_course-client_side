@@ -10,6 +10,7 @@ import CostEffectiveness from './CostEffectiveness';
 import FAQ from './Components/FAQ';
 import UpComing from './Components/UpComing/UpComing';
 import Experience from './Components/Experience';
+import Review from './Components/Review/Review';
 
 
 const Home = () => {
@@ -30,6 +31,7 @@ const Home = () => {
             <FAQ></FAQ>
             <UpComing></UpComing>
             <Experience></Experience>
+            <Review></Review>
         </div>
     );
 };
