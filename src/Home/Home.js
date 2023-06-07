@@ -8,6 +8,8 @@ import Collaboration from './Components/Collaboration';
 import Student from './Components/Student/Student';
 import CostEffectiveness from './CostEffectiveness';
 import FAQ from './Components/FAQ';
+import UpComing from './Components/UpComing/UpComing';
+import Experience from './Components/Experience';
 
 
 const Home = () => {
@@ -26,6 +28,8 @@ const Home = () => {
             <Student></Student>
             <CostEffectiveness></CostEffectiveness>
             <FAQ></FAQ>
+            <UpComing></UpComing>
+            <Experience></Experience>
         </div>
     );
 };
